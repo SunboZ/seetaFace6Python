@@ -22,6 +22,8 @@ seetaFace = SeetaFace(init_mask)
 
 camera = cv2.VideoCapture(0)
 
+seetaFace.SetProperty(DetectProperty.PROPERTY_MIN_FACE_SIZE,20)
+
 if camera.isOpened():
     while 1:
         flag,frame = camera.read()
